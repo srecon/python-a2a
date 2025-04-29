@@ -1,13 +1,11 @@
 # uv run simple_agent.py from the parent directory
 
 from python_a2a import A2AServer, skill, agent, run_server, TaskStatus, TaskState
-#from langchain_community.tools.yahoo_finance_news import YahooFinanceNewsTool
-#from crewai_tools import ScrapeWebsiteTool
+
 import os
 import requests
 import logging
 
-#export OPENWEATHER_API_KEY=465ea17235b4b73507adb719914b199d
 
 @agent(
     name="Weather Agent",
@@ -24,7 +22,6 @@ class WeatherAgent(A2AServer):
         examples="I am a weather agent for getting weather forecast from Open weather"
     )
     def get_weather(self, location):
-        #os.environ["OPENWEATHER_API_KEY"] = "aea5c23bf498283c86574f8aab3971f1"
 
         """Get real weather for a location using OpenWeatherMap API."""
         api_key = os.getenv("OPENWEATHER_API_KEY")
