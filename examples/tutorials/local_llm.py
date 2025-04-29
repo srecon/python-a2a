@@ -14,9 +14,6 @@ Usage:
 Press Ctrl+C to stop the servers.
 """
 
-#from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import PromptTemplate
 from python_a2a import A2AClient, run_server
 from python_a2a.langchain import to_a2a_server
 from langchain_ollama.llms import OllamaLLM
